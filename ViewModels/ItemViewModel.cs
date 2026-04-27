@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace Blockage.Editor.ViewModels;
 
-internal sealed partial class ItemViewModel : ObservableObject {
+public sealed partial class ItemViewModel : ObservableObject {
 	public event PropertyChangedEventHandler PropertyChanged;
 
 	[ObservableProperty]
@@ -37,4 +37,5 @@ internal sealed partial class ItemViewModel : ObservableObject {
 		Height = Height,
 		Type = Type
 	};
+	public ItemViewModel Copy() => Clone();
 }
